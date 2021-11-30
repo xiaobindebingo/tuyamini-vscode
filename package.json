@@ -3,6 +3,10 @@
 	"displayName": "tuyamini-vscode",
 	"description": "涂鸦小程序vscode插件",
 	"publisher": "xiaobindebingo",
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/xiaobindebingo/tuyamini-vscode"
+  },
 	"version": "0.0.1",
 	"icon": "./res/icon.png",
 	"engines": {
