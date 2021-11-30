@@ -8,7 +8,7 @@
     "url": "https://github.com/xiaobindebingo/tuyamini-vscode"
   },
   "version": "0.0.5",
-  "icon": "./res/icon.png",
+  "icon": "res/icon.png",
   "engines": {
     "vscode": "^1.59.1"
   },
