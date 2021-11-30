@@ -1,5 +1,5 @@
 
-<img align="right" width="90px" src="./res/icon.png" alt="wxml language features logo" />
+
 
 ## 涂鸦小程序
 

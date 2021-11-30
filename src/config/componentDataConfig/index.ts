@@ -194,7 +194,7 @@ const componentDataConfig: IComponent[] = [
         "type": {
           "name": "string"
         },
-        required: true,
+        required: false,
         "desc": [
           "指定按下去的样式类。当 `hover-class=\"none\"` 时，没有点击态效果"
         ],
