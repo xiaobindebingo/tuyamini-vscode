@@ -5,7 +5,7 @@
   "publisher": "xiaobindebingo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaobindebingo/tuyamini-vscode",
+    "url": "https://github.com/xiaobindebingo/tuyamini-vscode"
   },
   "version": "0.0.5",
   "icon": "./res/icon.png",
