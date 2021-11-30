@@ -1,0 +1,51 @@
+{
+  "title": "JSON schema for wx page config",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "wx page config auto detect",
+  "type": "object",
+  "properties": {
+    "navigationBarBackgroundColor": {
+      "description": "导航栏背景颜色",
+      "default": "#000000",
+      "type": "string"
+    },
+    "navigationBarTextStyle": {
+      "description": "导航栏标题颜色",
+      "type": "string",
+      "default": "white",
+      "enum": ["white", "black"]
+    },
+    "navigationBarTitleText": {
+      "description": "导航栏标题文字内容",
+      "type": "string"
+    },
+    "backgroundColor": {
+      "description": "窗口的背景色",
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "backgroundTextStyle": {
+      "description": "下拉 loading 的样式",
+      "type": "string",
+      "default": "dark",
+      "enum": ["dark", "light"]
+    },
+    "enablePullDownRefresh": {
+      "description": "是否全局开启下拉刷新",
+      "type": "boolean",
+      "default": false,
+      "enum": [false, true]
+    },
+    "onReachBottomDistance": {
+      "description": "页面上拉触底事件触发时距页面底部距离，单位为px",
+      "type": "number",
+      "default": 50
+    },
+    "disableScroll": {
+      "description": "设置为 true 则页面整体不能上下滚动；只在页面配置中有效，无法在 app.json 中设置该项",
+      "type": "boolean",
+      "default": false,
+      "enum": [false, true]
+    }
+  }
+}

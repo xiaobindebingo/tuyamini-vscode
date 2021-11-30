@@ -1,0 +1,206 @@
+{
+  "title": "JSON schema for ty page config",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "tymini page config auto detect",
+  "type": "object",
+  "properties": {
+    "pages": {
+      "description": "页面路径列表",
+      "type": "array"
+    },
+    "window": {
+      "description": "全局的默认窗口表现",
+      "type": "object",
+      "properties": {
+        "navigationBarBackgroundColor": {
+          "description": "导航栏背景颜色，如 #000000",
+          "type": "string",
+          "default": "#000000"
+        },
+        "navigationBarTextStyle": {
+          "description": "导航栏标题颜色，仅支持 black / white",
+          "type": "string",
+          "default": "white",
+          "enum": ["black", "white"]
+        },
+        "navigationBarTitleText": {
+          "description": "导航栏标题文字内容",
+          "type": "string"
+        },
+        "navigationStyle": {
+          "description": "导航栏样式",
+          "default": "default",
+          "type": "string",
+          "enum": ["default", "custom"]
+        },
+        "backgroundColor": {
+          "description": "窗口的背景色",
+          "type": "string",
+          "default": "#ffffff"
+        },
+        "backgroundTextStyle": {
+          "description": "下拉 loading 的样式",
+          "type": "string",
+          "default": "dark",
+          "enum": ["dark", "light"]
+        },
+        "backgroundColorTop": {
+          "description": "顶部窗口的背景色，仅 iOS 支持",
+          "type": "string",
+          "default": "#ffffff"
+        },
+        "backgroundColorBottom": {
+          "description": "底部窗口的背景色，仅 iOS 支持",
+          "type": "string",
+          "default": "#ffffff"
+        },
+        "enablePullDownRefresh": {
+          "description": "是否开启当前页面的下拉刷新",
+          "type": "boolean",
+          "default": false,
+          "enum": [true, false]
+        },
+        "onReachBottomDistance": {
+          "description": "页面上拉触底事件触发时距页面底部距离，单位为px",
+          "type": "number",
+          "default": 50
+        },
+        "pageOrientation": {
+          "description": "屏幕旋转设置",
+          "type": "string",
+          "default": "portrait",
+          "enum": ["portrait", "auto"]
+        }
+      }
+    },
+    "tabBar": {
+      "description": "tab 栏",
+      "type": "object",
+      "required": ["color", "selectedColor"],
+      "properties": {
+        "color": {
+          "description": "tab 上的文字默认颜色，仅支持十六进制颜色",
+          "type": "string",
+          "default": "#ffffff"
+        },
+        "selectedColor": {
+          "description": "tab 上的文字选中时的颜色，仅支持十六进制颜色",
+          "type": "string",
+          "default": "#ffffff"
+        },
+        "backgroundColor": {
+          "description": "tab 的背景色",
+          "type": "string",
+          "default": "#ffffff"
+        },
+        "borderStyle": {
+          "description": "tabbar上边框的颜色",
+          "type": "string",
+          "default": "black",
+          "enum": ["black", "white"]
+        },
+        "list": {
+          "description": "tab 的列表",
+          "type": "array",
+          "items": {
+            "type":"object",
+            "properties": {
+              "pagePath": {
+                "description": "页面路径，必须在 pages 中先定义",
+                "type": "string"
+              },
+              "text": {
+                "description": "tab 上按钮文字",
+                "type": "string"
+              },
+              "iconPath": {
+                "description": "图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px，不支持网络图片.当 postion 为 top 时，不显示 icon",
+                "type": "string"
+              },
+              "selectedIconPath": {
+                "description": "选中时的图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px，不支持网络图片。当 postion 为 top 时，不显示 icon。",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "position": {
+          "description": "tabBar的位置",
+          "default": "bottom",
+          "type": "string",
+          "enum": ["bottom", "top"]
+        }
+      }
+    },
+    "networkTimeout": {
+      "type": "object",
+      "description": "各类网络请求的超时时间，单位均为毫秒",
+      "properties": {
+        "request": {
+          "description": "wx.request 的超时时间，单位：毫秒。",
+          "default": 60000,
+          "type": "number"
+        },
+        "connectSocket": {
+          "description": "wx.connectSocket 的超时时间，单位：毫秒。",
+          "default": 60000,
+          "type": "number"
+        },
+        "uploadFile": {
+          "description": "wx.uploadFile 的超时时间，单位：毫秒。",
+          "default": 60000,
+          "type": "number"
+        },
+        "downloadFile": {
+          "description": "wx.downloadFile 的超时时间，单位：毫秒。",
+          "default": 60000,
+          "type": "number"
+        }
+      }
+    },
+    "debug": {
+      "description": "是否开启 debug 模式，默认关闭",
+      "type": "boolean",
+      "default": false
+    },
+    "functionalPages": {
+      "description": "是否启用插件功能页，默认关闭",
+      "type": "boolean",
+      "default": false
+    },
+    "subpackages": {
+      "description": "分包结构配置",
+      "type": "object"
+    },
+    "workers": {
+      "description": "Worker 代码放置的目录",
+      "type": "string"
+    },
+    "requiredBackgroundModes": {
+      "type": "array",
+      "description": "需要在后台使用的能力，如「音乐播放」"
+    },
+    "plugins": {
+      "description": "使用到的插件",
+      "type": "object"
+    },
+    "preloadRule": {
+      "description": "分包预下载规则",
+      "type": "object"
+    },
+    "resizable": {
+      "description": "iPad 小程序是否支持屏幕旋转，默认关闭",
+      "default": false,
+      "type": "boolean",
+      "enum": [true, false]
+    },
+    "navigateToMiniProgramAppIdList": {
+      "description": "需要跳转的小程序列表",
+      "type": "array"
+    },
+    "usingComponents": {
+      "description": "全局自定义组件配置",
+      "type": "object"
+    }
+  }
+}
