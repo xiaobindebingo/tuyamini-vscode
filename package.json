@@ -24,11 +24,11 @@
   "contributes": {
     "jsonValidation": [
       {
-        "fileMatch": "/pages/**/*.json",
+        "fileMatch": "pages/**/*.json",
         "url": "./src/json/page.json"
       },
       {
-        "fileMatch": "/manifest.json",
+        "fileMatch": "manifest.json",
         "url": "./src/json/manifest.json"
       }
     ],
