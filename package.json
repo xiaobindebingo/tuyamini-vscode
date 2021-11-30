@@ -25,11 +25,11 @@
     "jsonValidation": [
       {
         "fileMatch": "pages/**/*.json",
-        "url": "./json/page.json"
+        "url": "./res/json/page.json"
       },
       {
         "fileMatch": "manifest.json",
-        "url": "./json/manifest.json"
+        "url": "./res/json/manifest.json"
       }
     ],
     "languages": [
