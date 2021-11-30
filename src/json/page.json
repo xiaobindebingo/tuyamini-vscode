@@ -1,5 +1,5 @@
 {
-  "title": "JSON schema for wx page config",
+  "title": "JSON schema for tuya page config",
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"description": "tuya page config auto detect",
   "type": "object",

@@ -142,17 +142,17 @@
           "type": "number"
         },
         "connectSocket": {
-          "description": "wx.connectSocket 的超时时间，单位：毫秒。",
+          "description": "ty.connectSocket 的超时时间，单位：毫秒。",
           "default": 60000,
           "type": "number"
         },
         "uploadFile": {
-          "description": "wx.uploadFile 的超时时间，单位：毫秒。",
+          "description": "ty.uploadFile 的超时时间，单位：毫秒。",
           "default": 60000,
           "type": "number"
         },
         "downloadFile": {
-          "description": "wx.downloadFile 的超时时间，单位：毫秒。",
+          "description": "ty.downloadFile 的超时时间，单位：毫秒。",
           "default": 60000,
           "type": "number"
         }
