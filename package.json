@@ -18,7 +18,8 @@
   ],
   "activationEvents": [
     "onLanguage:javascript",
-    "onLanguage:xml"
+    "onLanguage:xml",
+    "onLanguage:json"
   ],
   "main": "./out/extension.js",
   "contributes": {
