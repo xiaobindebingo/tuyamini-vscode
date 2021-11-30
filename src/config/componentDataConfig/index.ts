@@ -479,5 +479,5 @@ const allDataConfig = [
 
     return item;
    });
-   
-export default componentDataConfig;
+
+export default allDataConfig;
