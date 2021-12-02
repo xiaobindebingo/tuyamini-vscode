@@ -38,7 +38,7 @@ function autoConfig() {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "tuyamini-vscode" is now active!');
+	console.log('Congratulations, your extension "Tuya miniapp" is now active!');
 	autoConfig();
 	languages.registerCompletionItemProvider(
 		{ scheme: 'file', language: 'xml' },

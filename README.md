@@ -3,7 +3,7 @@
 
 ## 涂鸦小程序
 
-> 插件名`tuyamini-vscode` 涂鸦小程序vscode插件
+> 插件名`Tuya miniapp` 涂鸦小程序vscode插件
 
 ## 最近更新
 
