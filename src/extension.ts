@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 
 import * as vscode from 'vscode';
+import { createComponentCommand, createPageCommand } from './commands';
 const { workspace, languages } = vscode;
 import XMLCompletionIns from './plugins/xmlCompletion';
 
@@ -38,6 +39,7 @@ function autoConfig() {
 }
 
 export function activate(context: vscode.ExtensionContext) {
+  context.subscriptions.push(createComponentCommand, createPageCommand)
 	console.log('Congratulations, your extension "Tuya miniapp" is now active!');
 	autoConfig();
 	languages.registerCompletionItemProvider(
