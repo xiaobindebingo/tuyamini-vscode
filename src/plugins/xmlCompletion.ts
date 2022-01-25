@@ -94,13 +94,13 @@ class XMLCompletion implements CompletionItemProvider {
     return [];
   }
   createAttrAttibuteItems(document: TextDocument, position: Position): ProviderResult<CompletionItem[] | CompletionList<CompletionItem>> {
-  // debugger
     // 是否在 标签上，在属性值上并且有属性名
     //  1. 如果属性名是class
     // 2. 是否以bind: catch 开头
     // 3. 如果输入空格 attrValue.trim() ==''时； 补全所有属性
     // 4. 
     const tag = getXMLTag(document, position);
+
     return [];
   }
 
@@ -139,17 +139,17 @@ class XMLCompletion implements CompletionItemProvider {
   insertText(tagData: IComponent) :SnippetString{
     const { name: tagName, attrs } = tagData;
     let autoStr = '';
-    const autoComplateAttrs = attrs?.filter(attr => attr.required)?.map((attr, index) => {
+    const autoCompleteAttrs = attrs?.filter(attr => attr.required)?.map((attr, index) => {
       const { name, defaultValue } = attr || {};
       const { attrQuote } = this;
       return `${name}=${attrQuote}${this.getDefaultValue(index + 1, defaultValue)}${attrQuote}`;
     }) || [];
     if (selfCloseTag.includes(tagName)) {
       // 自闭合标签
-       autoStr = `${tagName} ${autoComplateAttrs.join(' ')}/>\${0}`;
+       autoStr = `${tagName} ${autoCompleteAttrs.join(' ')}/>\${0}`;
      } else {
  
-       autoStr = `${tagName} ${autoComplateAttrs.join(' ')}></${tagName}>\${0}`;
+       autoStr = `${tagName}${autoCompleteAttrs.length ?' ': ''}${autoCompleteAttrs.join(' ')}>\${0}</${tagName}>`;
      }
     
 

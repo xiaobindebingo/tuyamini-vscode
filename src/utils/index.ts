@@ -143,11 +143,11 @@ export function getXMLTag(document: TextDocument, position: Position): null | Ta
       isOnTagName = offset - range[0] < tagName.length + 1;
       isOnAttrValue = attrFlagText[offset] === '%';
       isOnAttrName = !isOnTagName && !isOnAttrValue;
-      posWord =  document.getText(document.getWordRangeAtPosition(position, /\b[\w:.]+\b/));
+      posWord = document.getText(document.getWordRangeAtPosition(position, /\b[\w:.]+\b/));
       const initial: any = {};
       attrs = attrsStr.split(' ').filter(item => item.trim()!=='').reduce((prev,item) => {
         const [name, value ] = item.split('=');
-        if (name !== undefined && value !==undefined) {
+        if (name !== undefined && value !== undefined) {
           prev[name] = value;
         }
         return prev;

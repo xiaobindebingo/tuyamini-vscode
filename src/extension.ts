@@ -1,14 +1,15 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 
+import { readFile } from 'fs';
+import path = require('path');
 import * as vscode from 'vscode';
 import { createComponentCommand, createPageCommand } from './commands';
 const { workspace, languages } = vscode;
 import XMLCompletionIns from './plugins/xmlCompletion';
 
 function autoConfig() {
-	const c = workspace.getConfiguration()
-	const test = 	c.get('emmet.includeLanguages');
+	const c = workspace.getConfiguration();
 	const updates: { key: string; map: any }[] = [
 		{
 			key: 'files.associations',
@@ -39,9 +40,9 @@ function autoConfig() {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-  context.subscriptions.push(createComponentCommand, createPageCommand)
+
+	console.log(vscode.workspace)
 	console.log('Congratulations, your extension "Tuya miniapp" is now active!');
-	autoConfig();
 	languages.registerCompletionItemProvider(
 		{ scheme: 'file', language: 'xml' },
 		XMLCompletionIns,

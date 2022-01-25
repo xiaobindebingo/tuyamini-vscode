@@ -2,7 +2,7 @@ import { readFile, writeFile } from "fs/promises";
 import * as vscode from 'vscode';
 import * as path from 'path';
 
-const manifestPath = getMainfestPath();
+const manifestPath = getManifestPath();
 
 export async function rewriteManifest(params: {
   targetDirName: string
@@ -31,7 +31,7 @@ async function getManifestContent():Promise<string> {
   if(manifestPath) {
     try {
       let res = await readFile(manifestPath);
-      result = res.toString()
+      result = res.toString();
     } catch (error) {
       vscode.window.showErrorMessage('读取manifest文件出错,请检查是否存在manifest.json文件');
     }
@@ -42,10 +42,10 @@ async function getManifestContent():Promise<string> {
 }
 
 
-function getMainfestPath():string {
+function getManifestPath():string {
   let url :string= '';
   if (vscode.workspace.workspaceFolders && vscode.workspace.workspaceFolders.length === 1){
-    return url = path.join(vscode.workspace.workspaceFolders[0].uri.fsPath, '/manifest.json')
+    return url = path.join(vscode.workspace.workspaceFolders[0].uri.fsPath, '/manifest.json');
   } 
   return url;
 }

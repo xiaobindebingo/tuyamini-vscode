@@ -27,7 +27,6 @@ import { pageCssContent } from '../../assets/Page/page_css';
 import { pageXMLContent } from '../../assets/Page/page_xml';
 import { pageJsonContent } from '../../assets/Page/page_json';
 import { TemplateType } from '../constants';
-import { readFile } from 'fs/promises';
 
 
 const pageConfig = [
@@ -134,9 +133,3 @@ export async function generatorTemplateDir (params: {
     console.log(e);
   });
 }
-
-
-
-/**
- * 
- */

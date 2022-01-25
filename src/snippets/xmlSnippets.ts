@@ -17,29 +17,29 @@ const xmlSnippets: any = {
     button: {
       body: [
         '<button class=___${1:btn}___ type=___${2|primary,default,warn|}___ loading=___{{${3:loading}}}___ disabled=___{{${4:disabled}}}___ bindtap=___${5:onTap}___>',
-        '\t${7:按钮文本}',
-        '</button>$0',
+        '\t${7:按钮文本}$0',
+        '</button>',
       ],
     },
     'picker time': {
       body: [
         '<picker mode=___time___ value=___{{${1:time}}}___ start=___${2:09:01}___ end=___${3:21:01}___ bindchange=___${4:bindTimeChange}___>',
-        '\t<view>当前选择: {{${1:time}}}</view>',
-        '</picker>$0',
+        '\t<view>当前选择: {{${1:time}}}$0</view>',
+        '</picker>',
       ],
     },
     'picker date': {
       body: [
         '<picker mode=___date___ value=___{{${1:date}}}___ start=___${2:2015-09-01}___ end=___${3:2017-09-01}___ bindchange=___${4:bindDateChange}___>',
-        '\t<view>当前选择: {{${1:date}}}</view>',
-        '</picker>$0',
+        '\t<view>当前选择: {{${1:date}}}$0</view>',
+        '</picker>',
       ],
     },
     'picker region': {
       body: [
         '<picker mode=___region___ value=___{{${1:region}}}___ bindchange=___${3:bindRegionChange}___>',
-        '\t<view>当前选择：{{${1:region}[0]}}，{{${1:region}[1]}}，{{${1:region}[2]}}</view>',
-        '</picker>$0',
+        '\t<view>当前选择：{{${1:region}[0]}}，{{${1:region}[1]}}，{{${1:region}[2]}}$0</view>',
+        '</picker>',
       ],
     },
     'checkbox-group': {

@@ -1,0 +1,129 @@
+[
+  {
+    "type": "BlockComment",
+    "value": "\n@name Picker\n@desc 描述\n@since 1.0.0\n@pluginSupport? true",
+    "range": [
+      0,
+      75
+    ],
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 6,
+        "column": 3
+      }
+    },
+    "codeStart": 77,
+    "raw": "*\n * @name Picker\n * @desc 描述\n * @since 1.0.0\n * @pluginSupport? true\n ",
+    "code": {
+      "context": {},
+      "value": "",
+      "range": [
+        156,
+        156
+      ],
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 0
+        }
+      }
+    },
+    "description": "",
+    "footer": "",
+    "examples": [],
+    "tags": [
+      {
+        "title": "name",
+        "name": "Picker",
+        "description": ""
+      },
+      {
+        "title": "desc",
+        "name": "",
+        "description": "描述",
+        "inlineTags": []
+      },
+      {
+        "title": "since",
+        "name": "",
+        "description": "1.0.0",
+        "inlineTags": []
+      },
+      {
+        "title": "pluginSupport?",
+        "name": "",
+        "description": "true",
+        "inlineTags": []
+      }
+    ]
+  },
+  {
+    "type": "BlockComment",
+    "value": "\n@desc? xxx\n@required? true - false\n@since? 1.0.0 如果没有取上面的",
+    "range": [
+      156,
+      246
+    ],
+    "loc": {
+      "start": {
+        "line": 10,
+        "column": 4
+      },
+      "end": {
+        "line": 14,
+        "column": 7
+      }
+    },
+    "codeStart": 251,
+    "raw": "*\n     * @desc? xxx\n     * @required? true - false\n     * @since? 1.0.0 如果没有取上面的\n     ",
+    "code": {
+      "context": {},
+      "value": "});",
+      "range": [
+        7228,
+        7231
+      ],
+      "loc": {
+        "start": {
+          "line": 289,
+          "column": 0
+        },
+        "end": {
+          "line": 289,
+          "column": 3
+        }
+      }
+    },
+    "description": "",
+    "footer": "",
+    "examples": [],
+    "tags": [
+      {
+        "title": "desc?",
+        "name": "",
+        "description": "xxx",
+        "inlineTags": []
+      },
+      {
+        "title": "required?",
+        "name": "",
+        "description": "true false",
+        "inlineTags": []
+      },
+      {
+        "title": "since?",
+        "name": "",
+        "description": "1.0.0 如果没有取上面的",
+        "inlineTags": []
+      }
+    ]
+  }
+]
